@@ -7,7 +7,7 @@ $branch = $_POST["txtbranch"];
 $fees = $_POST["txtfees"];
 $mobile = $_POST["txtmobile"];
 
-$conn = mysqli_connect('localhost',"root","","php12batch");
+include_once('conn.php');
 $r = mysqli_query($conn,"insert into student(rno,name,branch,fees,mobile) values('$r','$name','$branch',$fees,'$mobile')");
 if(mysqli_affected_rows($conn)>0)
 {
